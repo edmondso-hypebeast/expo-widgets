@@ -6,15 +6,16 @@ type WidgetProjectFiles = { [key: string]: string[] }
 export class WidgetProjectFileCollection {
   private readonly _files: WidgetProjectFiles
 
-  constructor() {
-    this._files = {
-      swift: [],
-      entitlements: [],
-      plist: [],
-      xcassets: [],
-      intentdefinition: [],
-      strings: [],
-    };
+  constructor() {  
+    this._files = {  
+      swift: [],  
+      entitlements: [],  
+      plist: [],  
+      xcassets: [],  
+      intentdefinition: [],  
+      strings: [],  
+      xcstrings: [], // Add this line to support .xcstrings files  
+    };  
   }
 
   static fromFiles(files: string[]) {
